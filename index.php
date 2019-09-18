@@ -317,7 +317,17 @@
                             />
                             <label class="font-4 font-medium" title="09" data-title="ورود مبلغ (تومان)"></label>
                         </div>
-
+                        <div class="custom-input b-radius-1">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
+                        </div>
                     </div>
                     <div class="purchase-options mtn">
                         <label class="custom-radio dialog-toggle-item" data-name="Type" data-value="MTN!"
@@ -410,7 +420,17 @@
                             <span class="text-grey" data-placeholder-name="pin">انتخاب مبلغ کارت شارژ</span>
                             <i class="fas fa-money-bill-alt  font-2"></i>
                         </button>
-
+                        <div class="custom-input b-radius-1">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
+                        </div>
                     </div>
                     <div>
                         <input type="text" class="js-range-slider" name="count" value=""/>
@@ -471,6 +491,17 @@
                             <span class="text-grey" data-placeholder-name="internet-package">انتخاب بسته اینترنت</span>
                             <i class="fas fa-money-bill-alt  font-2"></i>
                         </button>
+                        <div class="custom-input b-radius-1">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
+                        </div>
                     </div>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
@@ -543,6 +574,17 @@
                             />
                             <label class="font-4 font-medium" title="09" data-title="شماره موبایل"></label>
                         </div>
+                        <div class="custom-input b-radius-1">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
+                        </div>
                     </div>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
@@ -599,6 +641,17 @@
                                     data-value=""
                             />
                             <label class="font-4 font-medium" title="09" data-title="شماره موبایل"></label>
+                        </div>
+                        <div class="custom-input b-radius-1 m-0">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
                         </div>
                     </div>
                     <div>
@@ -657,6 +710,17 @@
                                     data-value=""
                             />
                             <label class="font-4 font-medium" title="09" data-title="شماره موبایل"></label>
+                        </div>
+                        <div class="custom-input b-radius-1 m-0">
+                            <input
+                                    class="b-radius-1"
+                                    placeholder="@"
+                                    type="email"
+                                    data-name="email"
+                                    autocomplete="off"
+                                    data-value=""
+                            />
+                            <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
                         </div>
                     </div>
                     <div>

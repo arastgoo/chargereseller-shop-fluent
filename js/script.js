@@ -323,6 +323,9 @@ $(document).ready(function () {
         $(this).val(convertToEnglishDigit($(this).val()).replace(/[^\d\.\-]/g, ''));
         $('#dataPaymentId').val($(this).val());
     });
+    $(document).find('input[data-name="email"]').on('input', function () {
+        $('#dataEmail').val($(this).val());
+    });
     //Set max length for cellphone
     $(document).find('input[data-name="cellphone"]').on('input', function () {
         if ($(this).val().length > $(this).attr('maxLength')) {
@@ -378,9 +381,11 @@ $(document).ready(function () {
         $('.purchase-payment-gateways').find('li').removeClass('active');
         $('#dataIssuer').val('');
         $('#dataBillId').val('');
+        $('#dataEmail').val('');
         $('#dataPaymentId').val('');
         $('input[data-name="bill-id"]').val('');
         $('input[data-name="payment-id"]').val('');
+        $(document).find('input[data-name="email"]').val('');
         $(document).find('*[data-placeholder-name="topup"]').html('انتخاب مبلغ شارژ');
         $(document).find('*[data-placeholder-name="pin"]').html('انتخاب مبلغ کارت شارژ');
         $(document).find('*[data-placeholder-name="antivirus"]').html('انتخاب نوع آنتی ویروس');
@@ -618,6 +623,11 @@ $(document).ready(function () {
     //Check form validation
     function checkForm() {
         sendForm = false;
+        var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ($('#dataEmail').val().length !== 0 && !emailRegex.test($('#dataEmail').val())) {
+            swal('توجه!', 'ایمیل وارد شده صحیح نیست.', 'warning');
+            return;
+        }
         switch (kind) {
             case 'TopUp':
                 if (cellphone.length !== 11) {

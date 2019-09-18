@@ -391,7 +391,9 @@ header button i {
     justify-self: flex-end;
     /* padding-right: 4em; */
 }
-
+.m-0{
+    margin: 0 !important;
+}
 .purchase-products {
     display: flex;
     overflow-x: auto;
