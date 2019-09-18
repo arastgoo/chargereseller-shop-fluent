@@ -341,7 +341,8 @@ $(document).ready(function () {
 
     //Set max length for bill id and payment id
     $(document).find('input[data-name="bill-id"]').on('input', function () {
-        if ($(this).val().length > $(this).attr('maxLength')) {
+        if ($(this).val().length >= $(this).attr('maxLength')) {
+            $(document).find('input[data-name="payment-id"]').focus();
             $(this).val($(this).val().slice(0, $(this).attr('maxLength')));
         }
         $(this).val(convertToEnglishDigit($(this).val()).replace(/[^\d\.\-]/g, ''));
@@ -406,7 +407,6 @@ $(document).ready(function () {
     function resetForms() {
         var savedCellphone = getCookie('savedCellphone');
         $('#dataType').val('');
-        $('#dataCellphone').val('');
         if (savedCellphone === null) {
             $(document).find('input[data-name="cellphone"]').val('');
         } else {
