@@ -8,7 +8,7 @@
     <meta name="keywords" content="<?php echo $config['keywords']; ?>"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
     <link type="image/x-icon" rel="icon" href="css/favicon.ico"/>
-    <link type="text/css" rel="stylesheet" href="css/default.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css?v=1.1">
     <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.min.css">
 </head>
 <body>
@@ -566,6 +566,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.min.js?v=1.1"></script>
 </body>
 </html>

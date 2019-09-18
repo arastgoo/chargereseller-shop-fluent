@@ -8,7 +8,7 @@
     <meta name="keywords" content="<?php echo $config['keywords']; ?>"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
     <link type="image/x-icon" rel="icon" href="css/favicon.ico"/>
-    <link type="text/css" rel="stylesheet" href="css/default.min.css?v=1.0">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css?v=1.1">
     <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.min.css">
 </head>
 <body>
@@ -1032,7 +1032,7 @@
     <input type="text" name="data[issuer]" id="dataIssuer" value="">
     <input type="hidden" name="data[paymentDetails]" value="true">
     <input type="text" name="data[redirectToPage]" value="true">
-    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.0">
+    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.1">
     <input type="text" name="data[firstOutputType]" value="json">
     <input type="text" name="data[secondOutputType]" value="get">
 </form>
@@ -1046,6 +1046,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script src="js/script.min.js?v=1.0"></script>
+<script src="js/script.min.js?v=1.1"></script>
 </body>
 </html>
