@@ -4,6 +4,7 @@ $(document).ready(function () {
     var products;
     var paymentGateways;
     var selectedProduct;
+    var saveMobile;
     var sendForm = false;
     var downloadURL = "";
     var customAmount = false;
@@ -54,6 +55,11 @@ $(document).ready(function () {
         }
     });
 
+    //save mobile number on check
+    $('.savemobile').on('change', function () {
+        saveMobile = $(this).is(':checked');
+    });
+
     //Check for application
     function getApplication() {
         $.ajax({
@@ -101,6 +107,31 @@ $(document).ready(function () {
         $('.guide-content').removeClass('active');
         $('.guide-content[data-kind="' + target + '"]').addClass('active');
     });
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        document.cookie = name + '=; Max-Age=-99999999;';
+    }
 
     //Set Value for selected dialog item
     $(document).on('click', '.dialog-toggle-item', function () {
@@ -373,8 +404,16 @@ $(document).ready(function () {
 
     //Reset variables on  switching between menus
     function resetForms() {
+        var savedCellphone = getCookie('savedCellphone');
         $('#dataType').val('');
         $('#dataCellphone').val('');
+        if (savedCellphone === null) {
+            $(document).find('input[data-name="cellphone"]').val('');
+        } else {
+            console.log($(document).find('input[name="cellphone"]'));
+            $(document).find('input[data-name="cellphone"]').val(savedCellphone);
+            $(document).find('input[data-name="cellphone"]').trigger('input');
+        }
         $('#dataAmount').val('');
         $('#dataProductId').val('');
         $('#dataPackageId').val('');
@@ -751,6 +790,11 @@ $(document).ready(function () {
                 }
                 break;
         }
+
+        if (saveMobile) {
+            setCookie('savedCellphone', cellphone, 365)
+        }
+
         sendForm = true;
     }
 

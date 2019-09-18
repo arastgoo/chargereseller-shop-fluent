@@ -357,6 +357,11 @@
                             <p class="text-grey font-4 font-medium">شارژ شور انگیز</p>
                         </label>
                     </div>
+                    <label class="custom-radio">
+                        <input type="checkbox" class="savemobile" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
             </div>
@@ -436,6 +441,11 @@
                         <input type="text" class="js-range-slider" name="count" value=""/>
                         <p class="text-grey text-center">انتخاب تعداد</p>
                     </div>
+                    <label class="custom-radio savemobile">
+                        <input type="checkbox" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
             </div>
@@ -503,6 +513,11 @@
                             <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
                         </div>
                     </div>
+                    <label class="custom-radio savemobile">
+                        <input type="checkbox" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
 
@@ -586,6 +601,11 @@
                             <label class="font-4 font-medium" title="@" data-title="ایمیل"></label>
                         </div>
                     </div>
+                    <label class="custom-radio savemobile">
+                        <input type="checkbox" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
             </div>
@@ -658,6 +678,11 @@
                         <input type="text" class="js-range-slider" name="count" value=""/>
                         <p class="text-grey text-center">انتخاب تعداد</p>
                     </div>
+                    <label class="custom-radio savemobile">
+                        <input type="checkbox" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
             </div>
@@ -727,6 +752,11 @@
                         <input type="text" class="js-range-slider" name="count" value=""/>
                         <p class="text-grey text-center">انتخاب تعداد</p>
                     </div>
+                    <label class="custom-radio savemobile">
+                        <input type="checkbox" name="radio">
+                        <span class="checkmark"></span>
+                        <p class="text-grey font-4 font-medium">ذخیره اطلاعات تماس</p>
+                    </label>
                     <button class="btn btn-payment font-3 purchase-payment-btn-alt b-radius-1">ثبت خرید</button>
                 </div>
             </div>
