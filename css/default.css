@@ -531,6 +531,7 @@ header button i {
     display: flex;
     width: 100%;
     padding: 10px 0;
+    z-index: 0;
 }
 
 .application-container {
