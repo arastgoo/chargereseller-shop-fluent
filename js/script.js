@@ -92,6 +92,12 @@ $(document).ready(function () {
     //Menu functionality
     $('.menu-item').on('click', function () {
         kind = $(this).data('kind');
+        var savedCellphone = getCookie('savedCellphone');
+        $('#dataType').val('');
+        if (savedCellphone !== null) {
+            $(document).find('input[data-name="cellphone"]').val(savedCellphone);
+            $(document).find('input[data-name="cellphone"]').trigger('input');
+        }
         $('div[data-kind="' + kind + '"]').find('.purchase-products').find('div:not(".hidden"):first-child').trigger('click');
         resetForms();
         $('.menu').fadeOut('fast', function () {
@@ -405,15 +411,6 @@ $(document).ready(function () {
 
     //Reset variables on  switching between menus
     function resetForms() {
-        var savedCellphone = getCookie('savedCellphone');
-        $('#dataType').val('');
-        if (savedCellphone === null) {
-            $(document).find('input[data-name="cellphone"]').val('');
-        } else {
-            console.log($(document).find('input[name="cellphone"]'));
-            $(document).find('input[data-name="cellphone"]').val(savedCellphone);
-            $(document).find('input[data-name="cellphone"]').trigger('input');
-        }
         $('#dataAmount').val('');
         $('#dataProductId').val('');
         $('#dataPackageId').val('');
