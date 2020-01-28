@@ -670,7 +670,7 @@ $(document).ready(function () {
                     swal('توجه!', 'لطفا شماره موبایل را وارد کنید.', 'warning');
                     return;
                 }
-                if ((jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0990','0991']) === -1) && $('#dataType').val() !== 'WiMax') {
+                if ((jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0990','0991']) === -1) && $('#dataType').val() !== 'WiMax') {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
                 }
@@ -696,7 +696,7 @@ $(document).ready(function () {
                     swal('توجه!', 'جهت استفاده از خدمات پشتیبانی، شماره موبایل خود را وارد نمایید.', 'warning');
                     return;
                 }
-                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
+                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
                 }
@@ -753,7 +753,7 @@ $(document).ready(function () {
                     swal('توجه!', 'جهت استفاده از خدمات پشتیبانی، شماره موبایل خود را وارد نمایید.', 'warning');
                     return;
                 }
-                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0990','0991','0921', '0922', '0920',]) === -1) {
+                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0990','0991','0921', '0922', '0920',]) === -1) {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
                 }
@@ -767,7 +767,7 @@ $(document).ready(function () {
                     swal('توجه!', 'جهت ارسال سریال آنتی ویروس، شماره موبایل خود را وارد نمایید.', 'warning');
                     return;
                 }
-                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
+                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
                 }
@@ -781,7 +781,7 @@ $(document).ready(function () {
                     swal('توجه!', 'جهت ارسال سریال گیفت کارت، شماره موبایل خود را وارد نمایید.', 'warning');
                     return;
                 }
-                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
+                if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
                 }

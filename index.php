@@ -1032,7 +1032,7 @@
     <input type="text" name="data[issuer]" id="dataIssuer" value="">
     <input type="hidden" name="data[paymentDetails]" value="true">
     <input type="text" name="data[redirectToPage]" value="true">
-    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.2">
+    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.3">
     <input type="text" name="data[firstOutputType]" value="json">
     <input type="text" name="data[secondOutputType]" value="get">
 </form>
@@ -1046,6 +1046,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script src="js/script.min.js?v=1.2"></script>
+<script src="js/script.min.js?v=1.3"></script>
 </body>
 </html>
