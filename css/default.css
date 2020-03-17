@@ -1281,11 +1281,11 @@ h4, .font-4 {
 }
 
 .bills.water {
-    background-position: 0;
+    background-position: -1px  0;
 }
 
 .bills.electricity {
-    background-position: -60px 0;
+    background-position: -55px 0;
 }
 
 .bills.gas {
@@ -1307,7 +1307,9 @@ h4, .font-4 {
 .bills.police {
     background-position: -330px 0px;
 }
-
+.bills.pasargad {
+    background-position: -375px 0px;
+}
 .bill-info {
     display: flex;
     align-items: center;
