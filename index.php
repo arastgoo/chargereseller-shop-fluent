@@ -8,7 +8,7 @@
     <meta name="keywords" content="<?php echo $config['keywords']; ?>"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
     <link type="image/x-icon" rel="icon" href="css/favicon.ico"/>
-    <link type="text/css" rel="stylesheet" href="css/default.css?v=1.2">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css?v=1.3">
     <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.min.css">
 </head>
 <body>
@@ -298,6 +298,22 @@
                             <span class="operator-img mci b-radius-1 text-grey"></span>
                             <span class="operator-img rtl b-radius-1 text-grey"></span>
                         </div>
+                        <label class="custom-radio tarabord">
+                            <input type="checkbox" class="isTarabord" name="isTarabord">
+                            <span class="checkmark"></span>
+                            <p class="text-grey font-4 font-medium">ترابرد کردم</p>
+                        </label>
+                        <div class="operators-container">
+                            <label class="custom-radio operator" data-type="mtn">
+                                <span class="operator-img mtn b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                            <label class="custom-radio operator" data-type="mci">
+                                <span class="operator-img mci b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                            <label class="custom-radio operator" data-type="rtl">
+                                <span class="operator-img rtl b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                        </div>
                         <button class="btn btn-transparent dialog-toggle b-radius-1 font-4 text-grey purchase-select"
                                 data-dialog="TopUpDialog">
                             <span class="text-grey" data-placeholder-name="topup">انتخاب مبلغ شارژ</span>
@@ -494,6 +510,22 @@
                             <span class="operator-img mtn b-radius-1 text-grey"></span>
                             <span class="operator-img mci b-radius-1 text-grey"></span>
                             <span class="operator-img rtl b-radius-1 text-grey"></span></div>
+                        <label class="custom-radio tarabord">
+                            <input type="checkbox" class="isTarabord" name="isTarabord">
+                            <span class="checkmark"></span>
+                            <p class="text-grey font-4 font-medium">ترابرد کردم</p>
+                        </label>
+                        <div class="operators-container">
+                            <label class="custom-radio operator" data-type="mtn">
+                                <span class="operator-img mtn b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                            <label class="custom-radio operator" data-type="mci">
+                                <span class="operator-img mci b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                            <label class="custom-radio operator" data-type="rtl">
+                                <span class="operator-img rtl b-radius-1 text-grey" style="display: inline;"></span>
+                            </label>
+                        </div>
                         <button class="btn btn-transparent dialog-toggle b-radius-1 font-4 text-grey purchase-select"
                                 data-required-param="dataType"
                                 data-required-param-message="برای انتخاب بسته اینترنت ابتدا شماره موبایل را وارد کنید."
@@ -1032,8 +1064,9 @@
     <input type="text" name="data[issuer]" id="dataIssuer" value="">
     <input type="hidden" name="data[paymentDetails]" value="true">
     <input type="text" name="data[redirectToPage]" value="true">
-    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.3">
+    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.4">
     <input type="text" name="data[firstOutputType]" value="json">
+    <input type="hidden" name="data[isTarabord]" id="dataIsTarabord" >
     <input type="text" name="data[secondOutputType]" value="get">
 </form>
 
@@ -1046,6 +1079,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script src="js/script.min.js?v=1.4"></script>
+<script src="js/script.min.js?v=1.5"></script>
 </body>
 </html>

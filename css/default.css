@@ -1576,3 +1576,35 @@ h4, .font-4 {
         margin-top: 60px;
     }
 }
+
+.tarabord{
+    margin-bottom: 1em !important;
+}
+.operators-container{
+    display: none;
+    margin-bottom: 1em;
+}
+.custom-radio.operator {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 70px;
+    background: #dbe2ea;
+    padding: 5px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 0 0.5em;
+}
+
+.custom-radio.operator .operator-img {
+    position: static !important;
+    filter: grayscale(100%);
+}
+
+.custom-radio.operator.active .operator-img {
+    position: static !important;
+    filter: none;
+
+}

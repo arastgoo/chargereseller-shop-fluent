@@ -6,6 +6,7 @@ $(document).ready(function () {
     var selectedProduct;
     var saveMobile;
     var sendForm = false;
+    var isTarabord = false;
     var downloadURL = "";
     var customAmount = false;
     var simType = '';
@@ -59,7 +60,24 @@ $(document).ready(function () {
     $('.savemobile').on('change', function () {
         saveMobile = $(this).is(':checked');
     });
-
+    // tarabord functionality
+    $('.isTarabord').on('change', function () {
+        if($(this).is(':checked')){
+            $('.operators-container').css('display', 'flex');
+        }else{
+            $('.operators-container').css('display', 'none');
+            isTarabord = false;
+            $(document).find('div[data-kind="' + kind + '"').find('input[data-name="cellphone"]').trigger('input');
+            $(document).find('div[data-kind="' + kind + '"').find('.custom-radio.operator').removeClass('active');
+        }
+    });
+    $('.custom-radio.operator').on('click',function () {
+        $('.operators-container').find('.custom-radio.operator').removeClass('active');
+        $(this).addClass('active');
+        isTarabord = true;
+        simType = $(this).data('type');
+        $(document).find('div[data-kind="' + kind + '"').find('input[data-name="cellphone"]').trigger('input');
+    });
     //Check for application
     function getApplication() {
         $.ajax({
@@ -373,28 +391,30 @@ $(document).ready(function () {
         $('#dataCellphone').val($(this).val());
         //check cellphone operator type
         cellphone = $(this).val();
-        if (cellphoneFormats['mtn'].test(cellphone.substring(0, 3))) {
-            simType = 'mtn';
-        } else if ((kind === 'InternetPackage' || kind === 'TopUp') && cellphoneFormats['tdlte'].test(cellphone.substring(0, 3))) {
-            simType = 'mtn';
-        }
-        else if (cellphoneFormats['mci'].test(cellphone.substring(0, 3))) {
-            simType = 'mci'
-        } else if (cellphoneFormats['rtl'].test(cellphone.substring(0, 4))) {
-            if(kind === 'TopUp' && cellphone.substring(0, 4) === '0920'){
+        if(!isTarabord){
+            if (cellphoneFormats['mtn'].test(cellphone.substring(0, 3))) {
+                simType = 'mtn';
+            } else if ((kind === 'InternetPackage' || kind === 'TopUp') && cellphoneFormats['tdlte'].test(cellphone.substring(0, 3))) {
+                simType = 'mtn';
+            }
+            else if (cellphoneFormats['mci'].test(cellphone.substring(0, 3))) {
+                simType = 'mci'
+            } else if (cellphoneFormats['rtl'].test(cellphone.substring(0, 4))) {
+                if(kind === 'TopUp' && cellphone.substring(0, 4) === '0920'){
+                    simType = '';
+                    $('#dataType').val('');
+                }
+                else{
+                    simType = 'rtl';
+                }
+            } else if (kind !== 'Pin' ) {
                 simType = '';
                 $('#dataType').val('');
-            }
-            else{
-                simType = 'rtl';
-            }
-        } else if (kind !== 'Pin' ) {
-            simType = '';
-            $('#dataType').val('');
-            $('#TopUpDialog').find('.dialog-toggle-item').removeClass('hidden');
-            // $('#dataAmount').val('');
-            // $('.custom-amount').hide();
+                $('#TopUpDialog').find('.dialog-toggle-item').removeClass('hidden');
+                // $('#dataAmount').val('');
+                // $('.custom-amount').hide();
 
+            }
         }
         $(document).find('div[data-kind="' + kind + '"').find('.custom-input .operator-img').hide();
         if (simType !== '') {
@@ -414,6 +434,7 @@ $(document).ready(function () {
         $('#dataAmount').val('');
         $('#dataProductId').val('');
         $('#dataPackageId').val('');
+        $('#dataIsTarabord').val('');
         $('.purchase-payment-gateways').find('li').removeClass('active');
         $('#dataIssuer').val('');
         $('#dataBillId').val('');
@@ -432,6 +453,10 @@ $(document).ready(function () {
         $('.js-range-slider').data('ionRangeSlider').reset();
         $('#dataCount').val('1');
         simType = '';
+        isTarabord = false;
+        $(document).find('.operators-container').css('display','none');
+        $(document).find('.isTarabord').prop('checked',false);
+        $(document).find('div[data-kind="' + kind + '"').find('.custom-radio.operator').removeClass('active');
         $('.dialog-list').find('.dialog-toggle-item').removeClass('hidden');
     }
 
@@ -641,6 +666,7 @@ $(document).ready(function () {
 
     //Submit form functionality
     $('.purchase-payment-btn').on('click', function () {
+        $('#dataIsTarabord').val(isTarabord);
         checkForm();
         if (sendForm) {
             $('.loading').fadeIn();
@@ -719,14 +745,23 @@ $(document).ready(function () {
                     swal('توجه!', 'شماره موبایل خود را وارد کنید.', 'warning');
                     return;
                 }
-                var regex = cellphoneFormats[$('#dataType').val().toLowerCase()];
+                var regex = cellphoneFormats[isTarabord ? simType:$('#dataType').val().toLowerCase()];
                 var selectedType = $('.purchase[data-kind="InternetPackage"]').find('.purchase-title').html();
                 if (selectedType.includes('ثابت')) {
                     regex = cellphoneFormats['tdlte'];
                 }
-                if ($('#dataType').val() === '' || $('#dataType').val().length === 0 || !regex.test(cellphone)) {
+                if ($('#dataType').val() === '' || $('#dataType').val().length === 0) {
                     swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
                     return;
+                }
+                if(isTarabord){
+                    if (jQuery.inArray(cellphone.substring(0, 3), ['093', '090', '091', '092','099']) === -1 && jQuery.inArray(cellphone.substring(0, 4), ['0921', '0922', '0920', '0990','0991']) === -1) {
+                        swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
+                    }
+                }else{
+                    if(!regex.test(cellphone)){
+                        swal('توجه!', 'شماره موبایل وارد شده صحیح نیست.', 'warning');
+                    }
                 }
                 if ($('#dataPackageId').val() === '' || $('#dataPackageId').val().length === 0) {
                     swal('توجه!', 'لطفا یک بسته اینترنت انتخاب کنید.', 'warning');
