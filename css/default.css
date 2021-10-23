@@ -269,7 +269,7 @@ header button i {
     height: 48px;
     margin: 5px;
     background-color: #ffffff;
-    background-image: url("../img/payment-gateways.png?v=999");
+    background-image: url("../img/payment-gateways.png?v=1.0");
     background-repeat: no-repeat;
 }
 
@@ -284,7 +284,9 @@ header button i {
 .emtiyaz {
     background-position: -269px -43px;
 }
-
+.default {
+    background-position: -313px -43px;
+}
 .zarinpal {
     background-position: -223px -43px;
 }
@@ -316,7 +318,9 @@ header button i {
 .zarinpal.active {
     background-position: -223px 2px;
 }
-
+.default.active {
+    background-position: -314px 2px;
+}
 .parsian.active {
     background-position: 2px 2px;
 }

@@ -861,11 +861,16 @@ $(document).ready(function () {
             }
         });
         //Add payment gateways to form
-        $.each(paymentGateways, function (gatewayKey, gatewayValue) {
-            $('.purchase-payment-gateways').each(function () {
-                $(this).append('<li class="' + gatewayValue.toLowerCase() + ' b-radius-1" data-value="' + gatewayValue + '"></li>');
+        paymentGateways = paymentGateways.filter(gateway => gateway == 'Zarinpal' || gateway == 'Emtiyaz');
+        paymentGateways.push('Default');
+        paymentGateways.reverse();
+        if (paymentGateways.length > 1) {
+            $.each(paymentGateways, function (gatewayKey, gatewayValue) {
+                $('.purchase-payment-gateways').each(function () {
+                    $(this).append('<li class="' + gatewayValue.toLowerCase() + ' b-radius-1" data-value="' + gatewayValue + '"></li>');
+                });
             });
-        });
+        }
         //Check for manual navigation in url
         var url = window.location.href;
         if (url.match("#topup$")) {
