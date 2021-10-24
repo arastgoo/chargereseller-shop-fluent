@@ -153,7 +153,7 @@
                     یا نیاز به راهنمایی، می توانید با واحد پشتیبانی
                     تماس حاصل فرمایید.
                 </h4>
-                <span class="label b-radius-1 label-md label-grey text-center">88019574 - 021</span>
+                <span class="label b-radius-1 label-md label-grey text-center support-number">88019574 - 021</span>
                 <section class="text-grey footer-social font-4">
                     ما را در شبکه های اجتماعی دنبال کنید
                     <section>
@@ -467,7 +467,7 @@
             یا نیاز به راهنمایی، می توانید با واحد پشتیبانی
             تماس حاصل فرمایید.
         </h4>
-        <span class="label b-radius-1 label-md label-grey text-center">88019574 - 021</span>
+        <span class="label b-radius-1 label-md label-grey text-center support-number">88019574 - 021</span>
     </div>
 </div>
 <div class="dialog" id="GuideDialog">
@@ -574,6 +574,6 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script src="js/script.min.js?v=1.2"></script>
+<script src="js/script.min.js?v=1.7"></script>
 </body>
 </html>

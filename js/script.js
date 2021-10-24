@@ -47,6 +47,8 @@ $(document).ready(function () {
         success: function (data) {
             products = data.products;
             paymentGateways = data.paymentGateways;
+            $('.support-number').html(data.support.phone || '');
+
             getApplication();
             initialize();
         },
@@ -840,7 +842,6 @@ $(document).ready(function () {
 
     //initialize products
     function initialize() {
-
         $.each(products.antivirus, function (key, val) {
             var lowerKey = key.toLowerCase();
             $(document).find('div[data-kind="Antivirus"]').find('.purchase-products').append('<div class="' + lowerKey + ' b-radius-1' + ((val !== '' && val != null && val.length != 0) ? '' : ' hidden') + '" data-product="' + key + '"></div>');
