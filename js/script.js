@@ -438,6 +438,7 @@ $(document).ready(function () {
         $('#dataPackageId').val('');
         $('#dataIsTarabord').val('');
         $('.purchase-payment-gateways').find('li').removeClass('active');
+        $('.purchase-payment-gateways').find('li[data-value="Default"]').addClass('active');
         $('#dataIssuer').val('');
         $('#dataBillId').val('');
         $('#dataEmail').val('');
