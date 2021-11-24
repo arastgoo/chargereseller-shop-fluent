@@ -400,7 +400,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
         <div class="purchase b-radius-3" data-kind="Pin">
@@ -485,7 +484,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
         <div class="purchase b-radius-3" data-kind="InternetPackage">
@@ -575,7 +573,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
         <div class="purchase b-radius-3" data-kind="Bill">
@@ -666,7 +663,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
         <div class="purchase b-radius-3" data-kind="Antivirus">
@@ -741,7 +737,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
         <div class="purchase b-radius-3" data-kind="Giftcard">
@@ -816,7 +811,6 @@
                 <div class="purchase-payment-gateways">
                 </div>
                 <button class="btn btn-payment font-3 purchase-payment-btn b-radius-1">پرداخت</button>
-                <h6 class="text-grey" style="margin-top: 1em">خرید با کلیه کارت‌های بانکی امکان پذیر می باشد.</h6>
             </div>
         </div>
     </div>
@@ -1070,7 +1064,7 @@
     <input type="text" name="data[issuer]" id="dataIssuer" value="">
     <input type="hidden" name="data[paymentDetails]" value="true">
     <input type="text" name="data[redirectToPage]" value="true">
-    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.6">
+    <input type="text" name="data[scriptVersion]" value="Script-fluent-1.7">
     <input type="text" name="data[firstOutputType]" value="json">
     <input type="hidden" name="data[isTarabord]" id="dataIsTarabord" >
     <input type="text" name="data[secondOutputType]" value="get">

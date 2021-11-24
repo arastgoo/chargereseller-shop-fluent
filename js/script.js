@@ -858,10 +858,11 @@ $(document).ready(function () {
                 var rootNode = $(this).parent().parent().parent();
                 $(rootNode).find('.purchase-payment').hide();
                 $(rootNode).find('.purchase-kinds-form').hide();
-                $(rootNode).append($('.not-available-product').clone());
+                $(rootNode).append($('.not-available-product:first').clone());
                 $(rootNode).find('.not-available-product').css('display', 'flex');
             }
         });
+
         //Add payment gateways to form
         paymentGateways = paymentGateways.filter(gateway => gateway == 'Zarinpal' || gateway == 'Emtiyaz');
         paymentGateways.push('Default');
